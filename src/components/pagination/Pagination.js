@@ -33,6 +33,7 @@ const Pagination = (props) => {
             </span>
           )}
           <span className='active'>{props.currentPage}</span>
+
           <span onClick={(e) => props.nextPage(e.target.innerText)}>
             {props.currentPage + 1}
           </span>
