@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  height: 83rem;
+}
+
+.marvelImage {
+  width: 100%;
+  transform: translateY(-8.3%);
+}
+
+.marvelLogoImg {
+  width: 32%;
+}
+
+.marvelLogo {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-120%);
+}
+
+@media (max-width: 81.5em) {
+  .header {
+    height: 65rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .header {
+    height: 55rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .header {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 29em) {
+  .header {
+    height: 30rem;
+  }
+}
