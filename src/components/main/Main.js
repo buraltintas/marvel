@@ -1,15 +1,9 @@
 import './Main.css';
 import '../../MediaQueries.css';
-import LoadingSpinner from '../loading/LoadingSpinner';
 
 const Main = (props) => {
   return (
     <div className='mainSection'>
-      {props.loading && (
-        <div className='loading'>
-          <LoadingSpinner />
-        </div>
-      )}
       <main className='cardContainer'>
         {!props.loading &&
           props.characters.map((item, index) => {

@@ -81,7 +81,11 @@ p {
   }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 45em) {
+  .loading {
+    margin-top: 5rem;
+  }
+
   .cardContainer {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);

@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Pagination from './components/pagination/Pagination';
+import LoadingSpinner from './components/loading/LoadingSpinner';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -89,7 +90,14 @@ function App() {
     <div className='App'>
       <Header />
 
+      {loading && (
+        <div className='loading'>
+          <LoadingSpinner />
+        </div>
+      )}
+
       <Main loading={loading} characters={characters} />
+
       <Pagination
         currentPage={+currentPage}
         nextPage={nextPage}
