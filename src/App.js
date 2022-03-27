@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import './App.css';
@@ -19,7 +19,7 @@ function App() {
     const ts = new Date().getTime();
     const stringToHash = ts + privateKey + publicKey;
     const hash = md5(stringToHash);
-    const baseUrl = 'http://gateway.marvel.com/v1/public/characters';
+    const baseUrl = 'https://gateway.marvel.com/v1/public/characters';
     const limit = 20;
     const url =
       baseUrl +
