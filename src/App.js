@@ -38,7 +38,7 @@ function App() {
     const res = await axios.get(url);
 
     if (res.status !== 200) {
-      alert('Something went wrong! Try again!');
+      alert('Bir şeyler ters gitti, yeniden deneyin! :(');
     } else {
       setCharacters(res.data.data.results);
 
