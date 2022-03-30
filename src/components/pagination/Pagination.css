@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .pagination span {
@@ -20,6 +20,16 @@
 
 .pagination span:hover {
   transform: scale(1.2);
+}
+
+.dots {
+  cursor: auto !important;
+  pointer-events: none !important;
+}
+
+.active {
+  cursor: auto !important;
+  pointer-events: none !important;
 }
 
 .arrow {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import './App.css';
@@ -12,6 +12,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPageNumber, setTotalPageNumber] = useState();
+
+  const main = useRef();
 
   const getData = async (numberOfOffset) => {
     setLoading(true);
@@ -37,6 +40,8 @@ function App() {
 
     const res = await axios.get(url);
 
+    setTotalPageNumber(res.data.data.total);
+
     if (res.status !== 200) {
       alert('Bir şeyler ters gitti, yeniden deneyin! :(');
     } else {
@@ -45,41 +50,35 @@ function App() {
       setLoading(false);
     }
 
-    if (JSON.parse(sessionStorage.getItem('characters'))) {
-      const charactersInStorage = JSON.parse(
-        sessionStorage.getItem('characters')
-      );
-      charactersInStorage.push(...res.data.data.results);
-      sessionStorage.setItem('characters', JSON.stringify(charactersInStorage));
-    } else {
+    if (currentPage === 1) {
       sessionStorage.setItem(
-        'characters',
+        `page ${currentPage}`,
+        JSON.stringify(res.data.data.results)
+      );
+    }
+
+    if (!sessionStorage.getItem(`page ${currentPage}`)) {
+      sessionStorage.setItem(
+        `page ${currentPage}`,
         JSON.stringify(res.data.data.results)
       );
     }
   };
 
   const nextPage = (num) => {
-    if (
-      JSON.parse(sessionStorage.getItem('characters')) &&
-      JSON.parse(sessionStorage.getItem('characters')).length >= num * 20
-    ) {
-      const charactersInStorage = JSON.parse(
-        sessionStorage.getItem('characters')
-      );
-      const charactersToRender = charactersInStorage.slice(
-        (num - 1) * 20,
-        (num - 1) * 20 + 20
+    if (sessionStorage.getItem(`page ${num}`)) {
+      const charactersToRender = JSON.parse(
+        sessionStorage.getItem(`page ${num}`)
       );
 
       setCharacters(charactersToRender);
-      setCurrentPage(num);
     } else {
-      setOffset((x) => x + 20);
-      setCurrentPage(num);
+      setOffset((num - 1) * 20);
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentPage(num);
+
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -101,6 +100,7 @@ function App() {
       <Pagination
         currentPage={+currentPage}
         nextPage={nextPage}
+        totalPageNumber={totalPageNumber}
         loading={loading}
       />
     </div>
