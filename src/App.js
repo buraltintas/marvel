@@ -58,6 +58,7 @@ function App() {
         `page ${currentPage}`,
         JSON.stringify(res.data.data.results)
       );
+      scrollToTop();
     }
   };
 
