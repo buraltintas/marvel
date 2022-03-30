@@ -50,8 +50,6 @@ function App() {
       setCharacters(res.data.data.results);
 
       setLoading(false);
-
-      scrollToTop();
     }
 
     // check if we have data for currentPage
