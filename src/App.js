@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import './App.css';
@@ -8,14 +8,14 @@ import Pagination from './components/pagination/Pagination';
 import LoadingSpinner from './components/loading/LoadingSpinner';
 
 function App() {
+  // initial states
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(false);
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPageNumber, setTotalPageNumber] = useState();
 
-  const main = useRef();
-
+  // fetch data from Marvel Api and store data in sessionStorage
   const getData = async (numberOfOffset) => {
     setLoading(true);
     const publicKey = '7cf5ee555c47a4c5e9ec988eb75a7861';
@@ -65,6 +65,7 @@ function App() {
     }
   };
 
+  // this function gets new page number that user clicked as a parameter and check if sessionStorage has data of that page else set new offset to call getData func
   const nextPage = (num) => {
     if (sessionStorage.getItem(`page ${num}`)) {
       const charactersToRender = JSON.parse(
@@ -78,9 +79,10 @@ function App() {
 
     setCurrentPage(num);
 
-    // window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // call getData function onload and if offset number changes call getData func again
   useEffect(() => {
     getData(offset);
   }, [offset]);

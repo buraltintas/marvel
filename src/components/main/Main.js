@@ -1,20 +1,9 @@
 import './Main.css';
 import '../../MediaQueries.css';
-import { useEffect, useRef } from 'react';
 
 const Main = (props) => {
-  const main = useRef();
-
-  useEffect(() => {
-    console.log('ok');
-
-    main.current.scrollIntoView({
-      behavior: 'smooth',
-    });
-  }, [props.characters]);
-
   return (
-    <div ref={main} className='mainSection'>
+    <div className='mainSection'>
       <main className='cardContainer'>
         {!props.loading &&
           props.characters.map((item, index) => {
