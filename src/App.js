@@ -50,13 +50,7 @@ function App() {
       setLoading(false);
     }
 
-    if (currentPage === 1) {
-      sessionStorage.setItem(
-        `page ${currentPage}`,
-        JSON.stringify(res.data.data.results)
-      );
-    }
-
+    // check if we have data for currentPage
     if (!sessionStorage.getItem(`page ${currentPage}`)) {
       sessionStorage.setItem(
         `page ${currentPage}`,
