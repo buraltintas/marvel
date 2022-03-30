@@ -2,7 +2,7 @@
 
 Marvel Page Homework with pagination
 
-- It scrolls to top automatically when user clicks on a page.
+- Window scrolls up automatically when user clicks on a page.
 - If user visits a new page, it fetchs data from Marvel Api and store in sessionStorage.
 - If data is stored in sessionStorage for page that user wants to visit, it doesn't fetch again. Take data from sessionStorage and render it.
 
