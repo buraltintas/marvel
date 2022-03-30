@@ -1,3 +1,15 @@
+# Week 3 Assignment
+
+Marvel Page Homework with pagination
+
+- It scrolls to top automatically when user clicks on a page.
+- If user visits a new page, it fetchs data from Marvel Api and store in sessionStorage.
+- If data is stored in sessionStorage for page that user wants to visit, it doesn't fetch again. Take data from sessionStorage and render it.
+
+Live: https://marvel-by-burak.netlify.app/
+
+![Alt text](https://i.ibb.co/n8MHLy9/screenshot.png?raw=true 'Optional Title')
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

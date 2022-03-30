@@ -106,12 +106,12 @@
 @media (max-width: 29em) {
   .pagination {
     justify-content: center;
+    gap: 1.6rem;
   }
 }
 
 @media (max-width: 24em) {
   .pagination {
-    gap: 1.8rem;
     font-size: 1.6rem;
   }
 }

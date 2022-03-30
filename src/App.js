@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import './App.css';
@@ -14,6 +14,8 @@ function App() {
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPageNumber, setTotalPageNumber] = useState();
+
+  const main = useRef();
 
   // fetch data from Marvel Api and store data in sessionStorage
   const getData = async (numberOfOffset) => {
@@ -67,13 +69,22 @@ function App() {
       );
 
       setCharacters(charactersToRender);
+      scrollToTop();
     } else {
       setOffset((num - 1) * 20);
     }
 
     setCurrentPage(num);
+  };
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // scroll window to below of header when user clicks to new page
+  const scrollToTop = () => {
+    const header = document.querySelector('.header');
+
+    window.scroll({
+      top: header.offsetHeight,
+      behavior: 'smooth',
+    });
   };
 
   // call getData function onload and if offset number changes call getData func again
@@ -90,8 +101,9 @@ function App() {
           <LoadingSpinner />
         </div>
       )}
-
-      <Main loading={loading} characters={characters} />
+      <div className='mainDiv' ref={main}>
+        <Main loading={loading} characters={characters} />
+      </div>
 
       <Pagination
         currentPage={+currentPage}
