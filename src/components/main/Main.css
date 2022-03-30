@@ -98,7 +98,7 @@ p {
   }
 }
 
-@media (max-width: 24em) {
+@media (max-width: 27em) {
   .cardContainer {
     grid-template-columns: 1fr;
     margin-top: 20rem;
