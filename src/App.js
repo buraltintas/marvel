@@ -17,11 +17,13 @@ function App() {
 
   const main = useRef();
 
+  console.log();
+
   // fetch data from Marvel Api and store data in sessionStorage
   const getData = async (numberOfOffset) => {
     setLoading(true);
-    const publicKey = '7cf5ee555c47a4c5e9ec988eb75a7861';
-    const privateKey = '9f5c54d74bead24d3919d28f7a3a694bce705ee8';
+    const publicKey = `${process.env.REACT_APP_PUBLIC_KEY}`;
+    const privateKey = `${process.env.REACT_APP_PRIVATE_KEY}`;
     const ts = new Date().getTime();
     const stringToHash = ts + privateKey + publicKey;
     const hash = md5(stringToHash);
