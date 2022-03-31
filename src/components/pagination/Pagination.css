@@ -1,5 +1,5 @@
 .pagination {
-  width: 65%;
+  width: 80%;
   margin: 0 auto;
   height: 7.2rem;
   margin-top: 4rem;
@@ -80,7 +80,7 @@
 
 @media (max-width: 62.5em) {
   .pagination {
-    width: 85%;
+    width: 90%;
   }
 }
 
