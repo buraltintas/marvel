@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import './App.css';
@@ -13,9 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPageNumber, setTotalPageNumber] = useState();
-
-  const main = useRef();
+  const [totalCharactersNumber, setTotalCharactersNumber] = useState();
 
   // fetch data from Marvel Api and store data in sessionStorage
   const getData = async (numberOfOffset) => {
@@ -42,17 +40,17 @@ function App() {
 
     const res = await axios.get(url);
 
-    setTotalPageNumber(res.data.data.total);
+    setTotalCharactersNumber(res.data.data.total);
 
     if (res.status !== 200) {
-      alert('Bir şeyler ters gitti, yeniden deneyin! :(');
+      return alert('Bir şeyler ters gitti, yeniden deneyin! :(');
     } else {
       setCharacters(res.data.data.results);
 
       setLoading(false);
     }
 
-    // check if we have data for currentPage
+    // check if we dont have data for currentPage, if not setItem to sessionStorage
     if (!sessionStorage.getItem(`page ${currentPage}`)) {
       sessionStorage.setItem(
         `page ${currentPage}`,
@@ -102,14 +100,13 @@ function App() {
           <LoadingSpinner />
         </div>
       )}
-      <div className='mainDiv' ref={main}>
-        <Main loading={loading} characters={characters} />
-      </div>
+
+      <Main loading={loading} characters={characters} />
 
       <Pagination
         currentPage={+currentPage}
         nextPage={nextPage}
-        totalPageNumber={totalPageNumber}
+        totalCharactersNumber={totalCharactersNumber}
         loading={loading}
       />
     </div>
