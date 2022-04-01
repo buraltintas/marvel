@@ -17,8 +17,6 @@ function App() {
 
   const main = useRef();
 
-  console.log();
-
   // fetch data from Marvel Api and store data in sessionStorage
   const getData = async (numberOfOffset) => {
     setLoading(true);
