@@ -5,6 +5,8 @@ import arrowRight from './arrow-right.png';
 import arrowLeft from './arrow-left.png';
 
 const Pagination = (props) => {
+  console.log(props.totalCharactersNumber);
+
   return (
     <>
       {!props.loading && (
@@ -39,44 +41,41 @@ const Pagination = (props) => {
           <span className='active'>{props.currentPage}</span>
 
           {!(
-            props.currentPage ===
-            Math.ceil(props.totalCharactersNumber) / 20
+            props.currentPage === Math.ceil(props.totalCharactersNumber / 20)
           ) &&
             props.currentPage + 1 !==
-              Math.ceil(props.totalCharactersNumber) / 20 && (
+              Math.ceil(props.totalCharactersNumber / 20) && (
               <span onClick={(e) => props.nextPage(e.target.innerText)}>
                 {props.currentPage + 1}
               </span>
             )}
 
           {!(
-            props.currentPage ===
-            Math.ceil(props.totalCharactersNumber) / 20
+            props.currentPage === Math.ceil(props.totalCharactersNumber / 20)
           ) &&
             props.currentPage + 1 !==
-              Math.ceil(props.totalCharactersNumber) / 20 && (
+              Math.ceil(props.totalCharactersNumber / 20) && (
               <span onClick={(e) => props.nextPage(e.target.innerText)}>
                 {props.currentPage + 2}
               </span>
             )}
 
           {props.currentPage + 4 <=
-            Math.ceil(props.totalCharactersNumber) / 20 && (
+            Math.ceil(props.totalCharactersNumber / 20) && (
             <span className='dots'>. . .</span>
           )}
 
           {props.currentPage + 2 !==
-            Math.ceil(props.totalCharactersNumber) / 20 &&
+            Math.ceil(props.totalCharactersNumber / 20) &&
             props.currentPage !==
-              Math.ceil(props.totalCharactersNumber) / 20 && (
+              Math.ceil(props.totalCharactersNumber / 20) && (
               <span onClick={(e) => props.nextPage(e.target.innerText)}>
-                {Math.ceil(props.totalCharactersNumber) / 20}
+                {Math.ceil(props.totalCharactersNumber / 20)}
               </span>
             )}
 
           {!(
-            props.currentPage ===
-            Math.ceil(props.totalCharactersNumber) / 20
+            props.currentPage === Math.ceil(props.totalCharactersNumber / 20)
           ) && (
             <img
               onClick={() => props.nextPage(props.currentPage + 1)}

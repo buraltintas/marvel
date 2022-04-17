@@ -8,7 +8,7 @@ Marvel Page Homework with pagination
 
 Live: https://marvel-by-burak.netlify.app/
 
-![Alt text](https://i.ibb.co/n8MHLy9/screenshot.png?raw=true 'Optional Title')
+![Alt text](https://i.ibb.co/YB5fxd0/screenshot.png?raw=true 'Optional Title')
 
 # Getting Started with Create React App
 
