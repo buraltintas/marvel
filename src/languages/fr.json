@@ -3,5 +3,9 @@
   "notfound": "Aucun résultat trouvé.",
   "searchCharacterName": "Commencez à taper pour trouver un caractère...",
   "searchCharacter": "Caractère de recherche",
-  "characterName": "Caractère de recherche"
+  "characterName": "Caractère de recherche",
+  "goBack": "Aller à la page principale",
+  "noInfo": "Pas de description disponible.",
+  "comics": "Des bandes dessinées",
+  "noComics": "Aucune bande dessinée disponible."
 }

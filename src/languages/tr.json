@@ -3,5 +3,9 @@
   "notfound": "Karakter bulunamadı.",
   "searchCharacterName": "Aramak istediğiniz karakter adını yazınız... ",
   "searchCharacter": "Karakter ara",
-  "characterName": "Karakter Adı"
+  "characterName": "Karakter Adı",
+  "goBack": "Anasayfaya dön",
+  "noInfo": "Açıklama bulunmuyor.",
+  "comics": "Çizgi Romanlar",
+  "noComics": "Çizgi Roman bulunamadı."
 }

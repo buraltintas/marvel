@@ -27,7 +27,7 @@
   width: 2.4rem;
   position: absolute;
   right: 4rem;
-  top: 1.5rem;
+  top: 1.7rem;
   cursor: pointer;
 }
 
@@ -103,6 +103,12 @@
   transform: translateY(-0.5rem);
 }
 
+@media (max-width: 81.5em) {
+  .deleteInputIcon {
+    right: 1.6rem;
+  }
+}
+
 @media (max-width: 62.5em) {
   .searchBarContainer {
     width: 90%;
@@ -133,6 +139,10 @@
   .searchInput::placeholder {
     font-size: 2rem;
   }
+
+  .deleteInputIcon {
+    right: 2rem;
+  }
 }
 
 @media (max-width: 35em) {
@@ -145,6 +155,11 @@
   .searchInput::placeholder {
     font-size: 1.6rem;
   }
+
+  .deleteInputIcon {
+    right: 1rem;
+    top: 2rem;
+  }
 }
 
 @media (max-width: 27em) {
@@ -156,5 +171,9 @@
 @media (max-width: 24em) {
   .searchInput::placeholder {
     font-size: 1.2rem;
+  }
+
+  .deleteInputIcon {
+    right: 0.6rem;
   }
 }

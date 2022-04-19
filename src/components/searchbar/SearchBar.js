@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { HeroContext } from '../../context/context';
 import { useTranslation } from 'react-i18next';
 import * as i18n from 'i18next';
@@ -9,6 +10,8 @@ const SearchBar = () => {
   const [activeLang, setActiveLang] = useState('tr');
   const { getData, searchedHeros, selectedHeroHandler } =
     useContext(HeroContext);
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -24,6 +27,7 @@ const SearchBar = () => {
 
   const selectHandler = (e) => {
     selectedHeroHandler(e);
+    navigate(`./${e.id}`, { replace: true });
     setInput('');
   };
 

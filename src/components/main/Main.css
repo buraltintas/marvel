@@ -31,6 +31,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 5.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .cardImg {
@@ -38,9 +40,18 @@
   padding-top: 1rem;
   border-top: 1px solid #fff;
   width: 90%;
+  transition: all 0.3s;
 }
 
-p {
+.card:hover .cardImg {
+  transform: translateY(-6rem);
+}
+
+.card:hover {
+  background-color: #363535;
+}
+
+.card p {
   height: 4.4rem;
   color: #fff;
   text-align: center;

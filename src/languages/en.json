@@ -3,5 +3,9 @@
   "notfound": "No results found.",
   "searchCharacterName": "Start typing to find a character...",
   "searchCharacter": "Search Character",
-  "characterName": "Nom du personnage"
+  "characterName": "Nom du personnage",
+  "goBack": "Go to main page",
+  "noInfo": "No description available.",
+  "comics": "Comics",
+  "noComics": "No comics available."
 }
