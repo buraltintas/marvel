@@ -7,7 +7,6 @@ import Main from './components/main/Main';
 import Pagination from './components/pagination/Pagination';
 import LoadingSpinner from './components/loading/LoadingSpinner';
 import SearchBar from './components/searchbar/SearchBar';
-import Hero from './components/hero/Hero';
 
 function App() {
   // initial states
