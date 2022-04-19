@@ -1,0 +1,33 @@
+.heroContainer {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+
+.heroHeading {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.heroHeading img {
+  border-radius: 1rem;
+  width: 20%;
+}
+
+.heroHeading a,
+.heroHeading a:active,
+.heroHeading a:visited {
+  color: #fff;
+  text-decoration: none;
+  border: 1px dashed gray;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.heroHeading a:hover {
+  border: 1px solid gray;
+  border-radius: 2rem;
+}

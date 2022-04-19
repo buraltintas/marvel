@@ -1,0 +1,160 @@
+.searchBarContainer {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 13.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.searchBarContainer label {
+  position: absolute;
+  top: -4rem;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+.searchBar {
+  width: 50%;
+  position: relative;
+}
+
+.deleteInputIcon {
+  width: 2.4rem;
+  position: absolute;
+  right: 4rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.languages {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchInput {
+  width: 90%;
+  background-color: #222222;
+  border: 1px solid #f4f4f4;
+  padding: 2rem;
+  color: #fff;
+  font-size: 16px;
+}
+
+.dropdownContainer {
+  position: absolute;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  background-color: #434343;
+  padding: 2rem;
+  width: 90%;
+  z-index: 999;
+}
+
+.dropdownContainer span {
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 1rem;
+}
+
+.dropdownContainer span:hover {
+  background-color: #5d5b5b;
+}
+
+.languages {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.active {
+  background-color: #ededed !important;
+}
+
+.languages button {
+  background-color: #7e7e7e;
+  width: 6.3rem;
+  height: 6.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.languages button:hover {
+  transform: translateY(-0.5rem);
+}
+
+@media (max-width: 62.5em) {
+  .searchBarContainer {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchBarContainer label {
+    position: relative;
+    text-align: center;
+    margin-bottom: -2rem;
+  }
+
+  .languages {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 62.5em) {
+  .searchBarContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 41em) {
+  .searchInput::placeholder {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .searchInput::placeholder {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 29em) {
+  .searchInput::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 27em) {
+  .searchInput::placeholder {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 24em) {
+  .searchInput::placeholder {
+    font-size: 1.2rem;
+  }
+}

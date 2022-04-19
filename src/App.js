@@ -6,6 +6,8 @@ import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Pagination from './components/pagination/Pagination';
 import LoadingSpinner from './components/loading/LoadingSpinner';
+import SearchBar from './components/searchbar/SearchBar';
+import Hero from './components/hero/Hero';
 
 function App() {
   // initial states
@@ -94,6 +96,8 @@ function App() {
   return (
     <div className='App'>
       <Header />
+
+      <SearchBar />
 
       {loading && (
         <div className='loading'>

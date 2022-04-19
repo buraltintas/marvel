@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { HeroProvider } from './context/context';
+import './i18next';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <HeroProvider>
     <App />
-  </React.StrictMode>,
+  </HeroProvider>,
   document.getElementById('root')
 );

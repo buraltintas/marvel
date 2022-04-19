@@ -5,7 +5,7 @@
 .cardContainer {
   width: 70%;
   margin: 0 auto;
-  margin-top: 40rem;
+  margin-top: 10rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;

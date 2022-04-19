@@ -5,8 +5,6 @@ import arrowRight from './arrow-right.png';
 import arrowLeft from './arrow-left.png';
 
 const Pagination = (props) => {
-  console.log(props.totalCharactersNumber);
-
   return (
     <>
       {!props.loading && (
