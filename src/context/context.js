@@ -12,7 +12,7 @@ const HeroProvider = ({ children }) => {
       return;
     }
 
-    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${e}&limit=5&apikey=7cf5ee555c47a4c5e9ec988eb75a7861`;
+    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${e}&limit=5&apikey=${process.env.REACT_APP_PUBLIC_KEY}`;
 
     const res = await axios.get(url);
 
