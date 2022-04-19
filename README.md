@@ -1,14 +1,19 @@
-# Week 3 Assignment
+# Week 6 Assignment
 
-Marvel Page Homework with pagination
+Marvel Page Homework with pagination and search bar
 
-- Window scrolls up automatically when user clicks on a page.
+- User can search for characters name and change language of the page.
+- When user starts typing, it show 5 options that matches with letters that user typed.
+- If user click on a character name or a character listed on homepage, it redirects user to detail page of character.
+- Window scrolls up automatically when user clicks on a new page.
 - If user visits a new page, it fetchs data from Marvel Api and store in sessionStorage.
 - If data is stored in sessionStorage for page that user wants to visit, it doesn't fetch again. Take data from sessionStorage and render it.
 
 Live: https://marvel-by-burak.netlify.app/
 
-![Alt text](https://i.ibb.co/YB5fxd0/screenshot.png?raw=true 'Optional Title')
+<a href="https://ibb.co/F7dgSwf"><img src="https://i.ibb.co/vzMZ7Pr/screenshot2.png" alt="screenshot2" border="0" /></a>
+
+<a href="https://ibb.co/0ZSWx3f"><img src="https://i.ibb.co/jG2xSFL/screenshot3.png" alt="screenshot3" border="0" /></a>
 
 # Getting Started with Create React App
 
@@ -25,11 +30,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
