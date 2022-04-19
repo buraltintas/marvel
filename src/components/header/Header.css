@@ -46,3 +46,15 @@
     margin-bottom: 20%;
   }
 }
+
+@media (min-width: 121.5em) {
+  .header {
+    margin-bottom: 25%;
+  }
+}
+
+@media (min-width: 160em) {
+  .header {
+    margin-bottom: 30%;
+  }
+}
