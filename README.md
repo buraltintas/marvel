@@ -1,6 +1,6 @@
-# Week 6 Assignment
 
-Marvel Page Homework with pagination and search bar
+
+Marvel Page with pagination and search bar
 
 - User can search for characters name and change language of the page.
 - When user starts typing, it show 5 options that matches with letters that user typed.
